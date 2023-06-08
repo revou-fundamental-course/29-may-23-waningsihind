@@ -4,9 +4,176 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Company Profile</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    
+    <header>
+        <img src="assets/Logo-RevoU.png" alt="RevoU Logo" class="logo">
+        <div class="nav-bar">
+            <div class="nav-item" ><a href="#">Home</a></div>
+            <div class="nav-item"><a href="#hero-section">Our Profile</a></div>
+            <div class="nav-item" ><a href="#headquarters">Headquarters</a></div>
+            <div class="nav-item" ><a href="#message_us">Message Us</a></div>
+    </header>
+
+    <main class="main content">
+        <h2 class="h2-style">Hi Indah, Welcome To Website</h2>
+        <h5 class ="h5-style">Ini adalah website latihan pertama</h5>
+            
+    <div id="hero-section" class="hero">
+        <h2 class="h2-style0">Our Profile</h2>
+        <p class="paragraph1">PT. Indah Makmur Sentosa, Tbk (Perseroan) didirikan pada tahun 1980 dengan pabrik pertama berlokasi di Tangerang. Setelah mampu memenuhi pasar Indonesia, Perseroan melakukan Penawaran Umum Perdana dan menjadi perusahaan publik pada tahun 2001 dengan target market; konsumen Asean. Kemudian melebarkan pangsa pasarnya ke negara negara di Asia. Saat ini produk Perseroan telah tersebar di 5 benua di dunia.</p>
+        <p class="paragraph1">Sebagai salah satu Fast Moving Consumer Goods Companies, PT. Indah Makmur Sentosa, Tbk telah membuktikan dirinya sebagai salah satu produsen makanan berkualitas tinggi dan telah mendapatkan banyak penghargaan, diantaranya adalah “Top Five Best Managed Companies in Indonesia” dari Asia Money, “Top 100 Exporter Companies in Indonesia” dari majalah Swa, “Top 100 public listed companies” dari majalah Investor Indonesia, “Best Manufacturer of Halal Products” dari Majelis Ulama Indonesia, Best Listed Company dari Berita Satu, “Indonesia’s Corporate Secretary Award, Top 5 Good Corporate Governance Issues in Consumer Goods Sector, dari Warta Ekonomi dan banyak lagi penghargaan lainnya.</p>
+    </div>
+    </main>
+
+
+    <div id="headquarters" class="headquarters-section">
+        <h2 class="h2-style1">Our Headquarters</h2>
+        <div class="wrapper">
+            <div class="headquarters-image-container">
+                <image src="assets/jakarta.png" class="headquarters-image">
+                <p class="p1">Jakarta</p>
+            </div>
+            <div class="headquarters-image-container">
+                <image src="assets/bandung.jpg" class="headquarters-image">
+                <p class="p1">Bandung</p>
+            </div>
+            <div class="headquarters-image-container">
+                <image src="assets/surabaya.png" class="headquarters-image">
+                <p class="p1">Surabaya</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="message_us" class = "message-us-container">
+        <h2 class="h2-style2">Message Us</h2>
+        <table>
+            <tr>
+                <td>
+                <div id="message-form-section" class="message-form" >
+                    <form name="message-form1" onsubmit="return validateForm()">
+                        <table class="table1">
+                            <tr>
+                                <td>Nama</td>
+                                <td>:</td>
+                                <td colspan="3"><input id="tb_nama" class="input" placeholder="Nama" type="text" name="full-name"></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Tanggal Lahir</td>
+                                <td>:</td>
+                                <td colspan="3"><input id="dp_tanggal_lahir" class="input"  type="date" name="tanggal-lahir"></td>
+                            </tr>
+            
+                            <tr>
+                                <td>Jenis Kelamin</td>
+                                <td>:</td>
+                                <td><input id="rb_male" type="radio" name="gender" value="laki-laki">Laki-laki</input></td>
+                                <td><input id="rb_female" type="radio" name="gender" value="perempuan">Perempuan</input></td>
+                                <td></td>
+                            </tr>
+            
+                            <tr>
+                                <td>Pesan</td>
+                                <td>:</td>
+                                <td colspan="3">
+                                    <textarea id="ta_pesan" placeholder="Pesan" class="text-area"  name="pesan"></textarea>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td colspan="4"><button onclick="onClickButtonSend()" class="kirim"type="button">Submit</button></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </td>
+            <td>
+                <div class="message-output-section">
+                    <table class="table2">          
+                        <tr>
+                            <td>Nama</td>
+                            <td>:</td>
+                            <td><span id="sender-full-name"></span></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Tanggal Lahir</td>
+                            <td>:</td>
+                            <td><span id="sender-tanggal-lahir"></span></td>
+                        </tr>
+            
+                        <tr>
+                            <td>Jenis Kelamin</td>
+                            <td>:</td>
+                            <td><span id="sender-gender"></span></td>
+                        </tr>
+            
+                        <tr>
+                            <td>Pesan</td>
+                            <td>:</td>
+                            <td><span id="sender-message"></span></td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+
+        // function onNavigation(str){
+        //     switch(str){
+        //         case 1:
+        //         window.open("../index.html","_self");
+        //         break;
+        //         case 2:
+        //         window.open("../our_profile.html","_self");
+        //         break;
+        //         case 3:
+        //         window.open("../portofolio.html","_self");
+        //         break
+        //         case 4:
+        //         window.open("../message_us.html","_self");
+        //         break;
+        //         default:
+        //         window.open("../index.html","_self");
+        //     }
+        // }
+
+        function onClickButtonSend(){
+
+                const nama = document.getElementById('tb_nama').value;
+                const cbMale = document.getElementById('rb_male').value;
+                const cbFemale = document.getElementById('rb_female').value;
+                const ttl = document.getElementById('dp_tanggal_lahir').value;
+                const pesan = document.getElementById('ta_pesan').value;
+
+                let gender = ""
+                if(cbFemale == true){
+                    gender = "Male"
+                }else{
+                    gender = "Female"
+                }
+
+                if (nama == "" || gender == "" || ttl == "" || ttl == "" || pesan == "") {
+                    alert("Ada yang tidak diisi")
+                } else {
+                    alert("Sukses")
+                    document.getElementById("sender-full-name").innerHTML = nama
+                    document.getElementById("sender-tanggal-lahir").innerHTML = ttl
+                    document.getElementById("sender-gender").innerHTML = gender
+                    document.getElementById("sender-message").innerHTML = pesan
+                }
+            }
+                
+
+    </script>
 </body>
+
+<footer>Created by Waningsih Lestary (Revou)</footer>
+
 </html>
